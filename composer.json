@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "rtb\\": "src/"
+    }
+  },
+  "require": {
+      "swiftmailer/swiftmailer": "^6.0"
+  }
+}

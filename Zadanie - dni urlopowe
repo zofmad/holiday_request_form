@@ -1,0 +1,34 @@
+Cel: Stworzenie formularza online za pomoc¹, którego pracownik mo¿e zg³osiæ urlop
+
+Szczegó³y:
+Zadanie polega na zaprojektowaniu i wykonaniu strony www za pomoc¹ której:
+pracownicy (Ada, Adam, Jan, Kasia, Maria) mog¹ wybraæ z listy rozwijanej swoje imiê,
+zaznaczyæ dni w których ich nie bêdzie (np. 2 pola daty – pierwszy dzieñ nieobecnoœci, 
+ostatni dzieñ nieobecnoœci w³¹cznie)
+wpisaæ maila do potwierdzenia przyjêcia zg³oszenia,
+zatwierdziæ formularz
+dane wype³nione w formularzu powinny zostaæ przes³ane do bazy SQL (mo¿e byæ dowolna baza 
+relacyjna np. MYSQL, POSTGRESQL)
+po przes³aniu formularza pracownik powinien otrzymaæ maila z: 
+jeœli ma dostêpne dni urlopowe : potwierdzeniem przyjêcia zg³oszenia, informacj¹ ile dni
+ urlopu zg³osi³, ¿e chce wykorzystaæ, ile dni urlopu zostanie mu do wykorzystania po urlopie 
+ jeœli nie ma dostêpnych dni urlopowych: potwierdzeniem przyjêcia zg³oszenia, informacj¹ 
+¿e liczba dni urlopowych jest niewystarczaj¹ca i ¿e ró¿nica zostanie potraktowana jako 
+bezp³atny urlop 
+
+Dla uproszczenia:
+zak³adamy ¿e ka¿dy pracownik ma do wykorzystania 100 dni lifetime, tzn.  
+nie bierzemy pod uwagê ¿e co roku doliczamy kolejne dni wolne
+pomijamy na razie autentykacjê, ka¿dy kto znajdzie siê na stronie mo¿e wype³niæ formularz
+zak³adamy, ¿e dni pracuj¹ce to wszystkie dni od poniedzia³ku do pi¹tku, 
+tzn. nie bierzemy pod uwagê œwi¹t w œrodku tygodnia
+
+W ramach rozwi¹zania nale¿y:
+Zamieœciæ dzia³aj¹cy formularz / stronê www na dowolnym darmowym hostingu i 
+przes³aæ adres url, pod którym znajduje siê formularz.
+Przes³aæ strukturê bazy danych SQL (dump).
+Przes³aæ skrypty PHP obs³uguj¹ce narzêdzie lub zamieœciæ je na Github.
+
+Jeœli wyst¹pi¹ niejasnoœci lub pytania jak ma dzia³aæ skrypt dla konkretnych 
+przypadków (np. data koñca urlopu jest wczeœniejsza ni¿ data rozpoczêcia urlopu) 
+nale¿y samemu podj¹æ decyzjê i przes³aæ opis przyjêtych za³o¿eñ wraz z rozwi¹zaniem zadania.
