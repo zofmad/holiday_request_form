@@ -1,1 +1,38 @@
 Założenia:
+Formularz:
+Formularz stworzony dla imion znajdujących się w bazie danych;
+Założyłam, że można wprowadzić daty przeszłe-wysłać formularz zeszłego urlopu.
+Data zakończenia musi być późniejsza lub równa dacie rozpoczęcia urlopu. W przypadku równych dat, 
+urlop został wzięty na jeden dzień.
+Urlop można wziąć tylko na pełne dni, nie można wiząć urlopu na kilka godzin, pole data zawiera tylko 
+dzień, miesiąc i rok, bez godziny.
+Maksymalny rok ustawiony w formularzu (32767) to maksymalny rok który może sprawdzić funkcja checkdate()-jest 
+na tyle odległy, że uznałam, że ne będzie to problem.
+Można wpisać dowolny mail dla potwierdzenia przyjęcia zgłoszenia przez system, nie ma weeryfikacji z polem 
+email w tabeli employee z bazy danych. Walidacja maila jest zwalidowana typem pola input (email)
+(wszystkie pola required)
+
+Baza danych:
+Do tabeli employee zapisywane jest imie oraz pozostałe dni płatnego urlopu. 
+Pozwoliłam sobie zostawić pole email "na przyszłość"-w realnym programie prawdopobnie 
+byłaby potrzeba sprawdzenia maila.
+
+Do bazy danych nie sa zapisywane dokladne daty urlopu oraz wpisany email. Te dane 
+zapisywałabym do tabeli archiwalnej/historii zmian (employee_history_accepted_holiday_requests) 
+polaczonej z tabela employee relacją wiele do jednego (lub jeden do jednego w przypadku zapisywania np. tylko ostatniej zmiany)
+
+Email:
+Do funkcjonalności możnaby dodać jeszcze wysyłanie maila, w którym jest link do potwierdzenia zgloszenia, ktory 
+przekierowuje na strone obslugujaca skrypt zapisu do bazy danych urlopu.(zmainy pozostałych dni płatnego urlopu.
+
+Tekst maila może być również w formacie HTML, wtedy plain text byłby wysłany jako załącznik.
+(różne serwisy róźnie wyświetlaja content html) 
+
+Połączenie z bazą danych:
+
+Możnawykonać również przez PDO, jednak zdecydowałam się na podstawową wersję.
+
+Ochrona:
+Ochrona przed html i sql injection.
+
+Jeśli potrzeba, wszystkie wymienione powyżej możliwości rozwinięcia/poprawy projektu jestem w stanie wykonać. 

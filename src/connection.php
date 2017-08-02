@@ -13,17 +13,13 @@
 
 //plik do laczenia z baza danych
 
-//$serverName='mysql.cba.pl';
+$serverName='mysql.cba.pl';
 //
-//$userName='zmadej';
-//$password='Dysonans2';
-//$baseName='zmadej';
+$userName='zmadej';
+$password='Dysonans2';
+$baseName='zmadej';
 
-$serverName='localhost';
 
-$userName='root';
-$password='';
-$baseName='rtb';
 
 $conn=new mysqli($serverName,
         $userName,$password, $baseName);
